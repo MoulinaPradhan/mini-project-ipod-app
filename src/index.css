@@ -13,7 +13,9 @@ code {
 }
 .container {
   height: 300px;
-
+  -webkit-box-reflect: below 3px -webkit-gradient(linear, right top, right
+        bottom, from(transparent), color-stop(40%, transparent), to(rgba(255, 255, 255, 0.2)));
+  box-shadow: inset 2px 0px 20px 0px black;
   width: 200px;
   margin: auto;
   margin-top: 60px;
@@ -35,24 +37,23 @@ code {
   background: linear-gradient(45deg, #000000, #106690);
   margin: auto;
   position: relative;
-  right: 0px;
-  top: -50px;
+  right: -2px;
+  top: -49px;
 }
 
 .handle-btn {
   height: 20px;
   width: 50px;
-  font-size: 13px;
-  font-weight: 900;
+
+  font-weight: 700;
   margin: 2px;
   text-align: center;
-  color: lightgray;
+  color: black;
   position: relative;
 }
 .handle-btn img {
   height: 100%;
   width: 100%;
-  color: grey;
 }
 .screen {
   height: 45%;
@@ -67,18 +68,31 @@ code {
 }
 
 #menu {
-  left: 30%;
-  top: 5%;
+  font-weight: 800;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 15px;
+  left: 32%;
+  top: 10%;
 }
 #forward {
-  left: 70%;
+  left: 66%;
   top: 26%;
 }
 #backward {
   left: -5%;
-  top: 13%;
+  top: 10%;
+  transform: rotate(180deg);
 }
 #pause {
-  top: 35%;
-  left: 33%;
+  display: flex;
+  top: 30%;
+  left: 35%;
+}
+#pause img {
+  height: 90%;
+  width: 50%;
+}
+#pause-img {
+  margin-left: -10px;
 }

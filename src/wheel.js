@@ -11,13 +11,17 @@ class Wheel extends React.Component {
             MENU
           </div>
           <div id="forward" className="handle-btn">
-            <img src="https://image.flaticon.com/icons/svg/1/1824.svg" />
+            <img src="https://www.svgrepo.com/show/39437/fast-forward.svg" />
           </div>
           <div id="backward" className="handle-btn">
-            <img src="https://image.flaticon.com/icons/svg/39/39395.svg" />
+            <img src="https://www.svgrepo.com/show/39437/fast-forward.svg" />
           </div>
           <div id="pause" className="handle-btn">
-            <img src="https://image.flaticon.com/icons/svg/2404/2404317.svg" />
+            <img src="https://www.svgrepo.com/show/204978/play.svg" />
+            <img
+              id="pause-img"
+              src="https://www.svgrepo.com/show/122186/pause.svg"
+            />
           </div>
           <div className="main-btn"></div>
         </div>
