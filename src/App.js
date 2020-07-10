@@ -1,10 +1,10 @@
-import React from 'react';
-import Wheel from './wheel'
+import React from "react";
+import Wheel from "./wheel";
 
 function App() {
   return (
     <div className="App">
-  <Wheel/>
+      <Wheel />
     </div>
   );
 }
