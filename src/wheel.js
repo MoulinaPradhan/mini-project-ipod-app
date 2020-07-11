@@ -1,13 +1,17 @@
 import React from "react";
-import ZingTouch from "zingtouch/src/ZingTouch";
+//to use zingtouch
+import ZingTouch from "zingtouch";
 
 class Wheel extends React.Component {
+  showMenu = () => {
+    console.log("menu is shown");
+  };
   render() {
     return (
+      
       <div className="container">
-        <div className="screen"></div>
         <div className="wheel">
-          <div id="menu" className="handle-btn">
+          <div id="menu" className="handle-btn" onClick={this.showMenu}>
             MENU
           </div>
           <div id="forward" className="handle-btn">
@@ -25,7 +29,8 @@ class Wheel extends React.Component {
           </div>
           <div className="main-btn"></div>
         </div>
-      </div>
+        </div>
+     
     );
   }
 }

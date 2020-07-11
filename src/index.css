@@ -18,7 +18,8 @@ code {
   box-shadow: inset 2px 0px 20px 0px black;
   width: 200px;
   margin: auto;
-  margin-top: 60px;
+
+  /*margin-top: 60px;*/
   background: linear-gradient(45deg, #000000, #106690, #00000026);
   border-radius: 14px;
 }
@@ -29,6 +30,8 @@ code {
   width: 130px;
   margin: auto;
   margin-top: 20px;
+  position: relative;
+  top: 162px;
 }
 .main-btn {
   height: 55px;
@@ -56,15 +59,17 @@ code {
   width: 100%;
 }
 .screen {
-  height: 45%;
-  width: 90%;
+  height: 150px;
+  width: 180px;
 
   background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSkF9uriXmYWKG0K_2BXJrU4Q3y-sgyhxtbWg&usqp=CAU");
   background-position: center;
   background-size: cover;
   margin: auto;
-  position: relative;
-  top: 10px;
+  position: absolute;
+  top: 6%;
+  left: 40.2%;
+  z-index: 1;
 }
 
 #menu {
@@ -74,6 +79,7 @@ code {
   font-size: 15px;
   left: 32%;
   top: 10%;
+  cursor: auto;
 }
 #forward {
   left: 66%;
@@ -95,4 +101,17 @@ code {
 }
 #pause-img {
   margin-left: -10px;
+}
+
+@media screen and (min-width: 410px) and (max-width: 600px) {
+  .screen {
+    top: 6%;
+    left: 31.5%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .screen {
+    top: 6%;
+    left: 23.2%;
+  }
 }
