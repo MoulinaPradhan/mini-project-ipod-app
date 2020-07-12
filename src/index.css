@@ -11,6 +11,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+/*wheel*/
 .container {
   height: 300px;
   -webkit-box-reflect: below 3px -webkit-gradient(linear, right top, right
@@ -58,19 +60,6 @@ code {
   height: 100%;
   width: 100%;
 }
-.screen {
-  height: 150px;
-  width: 180px;
-
-  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSkF9uriXmYWKG0K_2BXJrU4Q3y-sgyhxtbWg&usqp=CAU");
-  background-position: center;
-  background-size: cover;
-  margin: auto;
-  position: absolute;
-  top: 6%;
-  left: 40.2%;
-  z-index: 1;
-}
 
 #menu {
   font-weight: 800;
@@ -103,6 +92,21 @@ code {
   margin-left: -10px;
 }
 
+/*screen*/
+.screen {
+  height: 150px;
+  width: 180px;
+
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSkF9uriXmYWKG0K_2BXJrU4Q3y-sgyhxtbWg&usqp=CAU");
+  background-position: center;
+  background-size: cover;
+  margin: auto;
+  position: absolute;
+  top: 6%;
+  left: 40.2%;
+  z-index: 1;
+}
+
 @media screen and (min-width: 410px) and (max-width: 600px) {
   .screen {
     top: 6%;
@@ -114,4 +118,44 @@ code {
     top: 6%;
     left: 23.2%;
   }
+}
+.sideBar {
+  float: left;
+  background-color: white;
+  height: 100%;
+  width: 50%;
+}
+h1 {
+  margin-top: 1px;
+  text-align: left;
+  font-size: 25px;
+}
+.menu-list li a {
+  color: darkslategray;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+.menu-list {
+  margin-left: -34px;
+  margin-top: -2px;
+}
+.active {
+  height: auto;
+  width: 107%;
+  margin-left: -5.7px;
+  background-color: deepskyblue;
+}
+/*inner-elements*/
+.innerScreen {
+  height: 150px;
+  width: 180px;
+  background-color: lightgray;
+}
+.textHeading {
+  text-align: center;
+  text-transform: capitalize;
+}
+.imgContainer {
+  height: 50%;
+  width: 50%;
 }
