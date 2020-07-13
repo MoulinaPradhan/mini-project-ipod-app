@@ -37,20 +37,29 @@ class Wheel extends React.Component {
             MENU
           </div>
           <div id="forward" className="handle-btn">
-            <img src="https://www.svgrepo.com/show/39437/fast-forward.svg" />
+            <img
+              src="https://www.svgrepo.com/show/39437/fast-forward.svg"
+              alt="fast-forward"
+            />
           </div>
           <div id="backward" className="handle-btn">
-            <img src="https://www.svgrepo.com/show/39437/fast-forward.svg" />
+            <img
+              src="https://www.svgrepo.com/show/39437/fast-forward.svg"
+              alt="fast-backward"
+            />
           </div>
           <div id="pause" className="handle-btn">
-            <img src="https://www.svgrepo.com/show/204978/play.svg" />
+            <img
+              src="https://www.svgrepo.com/show/204978/play.svg"
+              alt="pause"
+            />
             <img
               id="pause-img"
               src="https://www.svgrepo.com/show/122186/pause.svg"
             />
           </div>
-          <div className="main-btn" id="toggle" onClick={showInnerScreen}></div>
         </div>
+        <div className="main-btn" id="toggle" onClick={showInnerScreen}></div>
       </div>
     );
   }

@@ -42,8 +42,9 @@ code {
   background: linear-gradient(45deg, #000000, #106690);
   margin: auto;
   position: relative;
-  right: -2px;
-  top: -49px;
+  top: 71px;
+  left: 1.5px;
+  z-index: 2;
 }
 
 .handle-btn {
@@ -149,13 +150,32 @@ h1 {
 .innerScreen {
   height: 150px;
   width: 180px;
-  background-color: lightgray;
+  background-color: white;
+  margin: auto;
+  position: absolute;
+  left: 40.2%;
+  top: 6%;
+  z-index: 1;
+}
+
+@media screen and (min-width: 410px) and (max-width: 600px) {
+  .innerScreen {
+    top: 6%;
+    left: 31.5%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .innerScreen {
+    top: 6%;
+    left: 23.2%;
+  }
 }
 .textHeading {
   text-align: center;
   text-transform: capitalize;
 }
 .imgContainer {
-  height: 50%;
-  width: 50%;
+  height: 80%;
+  width: 100%;
+  margin-top: -20px;
 }

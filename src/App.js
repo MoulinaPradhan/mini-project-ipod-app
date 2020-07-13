@@ -19,7 +19,7 @@ class App extends React.Component {
     if (showScreen === 0) {
       var prevSelected = selected;
       //if rotated in one direction(distance from last is positive)
-      if (h === 3) selected = (prevSelected + 1) % 3;
+      if (h === 3) selected = (prevSelected + 1) % 5;
       //if rotated in another direction(distance from last is negative)
       else if (h === -3) {
         selected = selected - 1;
@@ -88,8 +88,8 @@ class App extends React.Component {
           <Screen selected={selected} prevSelected={prevSelected} />
         )}
         {showScreen === 1 && <Coverflow />}
-        {showScreen === 2 && <Games />}
-        {showScreen === 3 && <Settings />}
+        {showScreen === 3 && <Games />}
+        {showScreen === 4 && <Settings />}
         <Wheel
           updateScreen={this.updateScreen}
           showInnerScreen={this.showInnerScreen}
