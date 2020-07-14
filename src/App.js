@@ -5,6 +5,9 @@ import Coverflow from "./Coverflow";
 import Games from "./Games";
 import Settings from "./Settings";
 import Music from "./Music";
+import Songs from "./Songs";
+import Artist from "./Artist";
+import Playlist from "./Playlist";
 class App extends React.Component {
   constructor() {
     super();
@@ -12,8 +15,8 @@ class App extends React.Component {
       prevSelected: 1, //the tab which was previously selected in SCREEN Component
       selected: 1, //the tab which is currwntly selected in SCREEN Component
       showScreen: 0, //the screen number which shows
-      mselected: 1,
-      pmselected: 1,
+      mselected: 1, //the music tab selected
+      pmselected: 1, // the previous  music tab that is selected
     };
   }
   updateScreen = (h) => {
@@ -136,6 +139,9 @@ class App extends React.Component {
         )}
         {showScreen === 3 && <Games />}
         {showScreen === 4 && <Settings />}
+        {showScreen === 5 && <Songs />}
+        {showScreen === 6 && <Artist />}
+        {showScreen === 7 && <Playlist />}
         <Wheel
           updateScreen={this.updateScreen}
           displayInnerScreen={this.displayInnerScreen}
