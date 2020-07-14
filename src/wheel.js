@@ -6,29 +6,30 @@ class Wheel extends React.Component {
   componentDidMount() {
     //once the component has been mounted
     var containerElements = document.getElementById("wheel");
-
+    //setting the wheel element as the active region for rotation
     var activeRegion = ZingTouch.Region(containerElements, undefined, false);
+    //for initilizing the rotate event from menu
 
     var childElement = document.getElementById("menu");
 
-    //binding zingtouch to active region where it will detect rotate events
+    //binding zingtouch to active region for rotate event
     activeRegion.bind(childElement, "rotate", (event) => {
       var d = event.detail.distanceFromLast;
       const { updateScreen } = this.props;
-      //if rotate din one direction
+      //if rotated in  one direction
       if (d > 1) {
         //call the function to change the active tab
-        updateScreen(3);
+        updateScreen(1);
       }
       //if rotated in another direction
       else if (d < -1) {
-        updateScreen(-3);
+        updateScreen(-1);
       }
     });
   }
 
   render() {
-    const { showInnerScreen, showMenu } = this.props;
+    const { displayInnerScreen, showMenu } = this.props;
     return (
       <div className="container">
         <div className="wheel" id="wheel">
@@ -56,10 +57,15 @@ class Wheel extends React.Component {
             <img
               id="pause-img"
               src="https://www.svgrepo.com/show/122186/pause.svg"
+              alt="button"
             />
           </div>
         </div>
-        <div className="main-btn" id="toggle" onClick={showInnerScreen}></div>
+        <div
+          className="main-btn"
+          id="toggle"
+          onClick={displayInnerScreen}
+        ></div>
       </div>
     );
   }

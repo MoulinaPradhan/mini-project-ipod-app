@@ -42,23 +42,23 @@ class Screen extends React.Component {
           <h1>Ipod</h1>
           <ul className="menu-list" type="none">
             <li className="listItem" id="list1">
-              <a href="#" className="menuLinks">
+              <a href="#xyz" className="menuLinks">
                 coverflow
               </a>
             </li>
 
             <li className="listItem" id="list2">
-              <a href="#" className="menuLinks">
+              <a href="#xyz" className="menuLinks">
                 music
               </a>
             </li>
             <li className="listItem" id="list3">
-              <a href="#" className="menuLinks">
+              <a href="#xyz" className="menuLinks">
                 games
               </a>
             </li>
             <li className="listItem" id="list4">
-              <a href="#" className="menuLinks">
+              <a href="#xyz" className="menuLinks">
                 settings
               </a>
             </li>
