@@ -40,9 +40,10 @@ class App extends React.Component {
         pmselected,
       });
     } else if (showScreen === 2) {
-      var prmselected = mselected;
+      var pmselected = mselected;
       // rotated in one direction
       if (h === 1) mselected = (mselected + 1) % 4;
+      // rotated in another direction
       else if (h === -1) {
         mselected = mselected - 1;
         if (mselected <= 0) mselected = 1;
@@ -52,7 +53,7 @@ class App extends React.Component {
         prevSelected: prevSelected,
         showScreen: 2,
         mselected: mselected,
-        pmselected: prmselected,
+        pmselected,
       });
     }
   };
@@ -75,8 +76,8 @@ class App extends React.Component {
         selected: selected,
         prevSelected: prevSelected,
         showScreen: 0, //show the screen number zero
-        mselected: mselected,
-        pmselected,
+        mselected: mselected, //the music tab that is selected
+        pmselected, //the previously selected music tab
       });
     } //when inside the music tab
     else {

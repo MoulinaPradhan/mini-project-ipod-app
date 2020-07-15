@@ -4,7 +4,11 @@ const Artist = () => {
   return (
     <div className=" innerScreen">
       <h1 className="textHeading">Artist</h1>
-      <img src="" className="imgContainer" alt="artist-songs" />
+      <img
+        src="https://i.imgur.com/aspxLEr.jpg"
+        className="imgContainer"
+        alt="artist-songs"
+      />
     </div>
   );
 };
