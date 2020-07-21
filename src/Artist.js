@@ -1,6 +1,35 @@
 import React from "react";
 
 class Artist extends React.Component {
+  componentDidMount() {
+    const { aselected } = this.props;
+    if (aselected === 1) {
+      document.getElementById("s1").checked = true;
+    } else if (aselected === 2) {
+      document.getElementById("s2").checked = true;
+    } else if (aselected === 3) {
+      document.getElementById("s3").checked = true;
+    } else if (aselected === 4) {
+      document.getElementById("s4").checked = true;
+    } else if (aselected === 5) {
+      document.getElementById("s5").checked = true;
+    }
+  }
+  componentDidUpdate() {
+    //every time the component updates
+    const { aselected, paselected } = this.props;
+    if (paselected === 1) document.getElementById("s1").checked = false;
+    else if (paselected === 2) document.getElementById("s2").checked = false;
+    else if (paselected === 3) document.getElementById("s3").checked = false;
+    else if (paselected === 4) document.getElementById("s4").checked = false;
+    else if (paselected === 5) document.getElementById("s5").checked = false;
+
+    if (aselected === 1) document.getElementById("s1").checked = true;
+    else if (aselected === 2) document.getElementById("s2").checked = true;
+    else if (aselected === 3) document.getElementById("s3").checked = true;
+    else if (aselected === 4) document.getElementById("s4").checked = true;
+    else if (aselected === 5) document.getElementById("s5").checked = true;
+  }
   render() {
     return (
       <div className=" innerScreen">

@@ -17,10 +17,19 @@ class App extends React.Component {
       showScreen: 0, //the screen number which shows
       mselected: 1, //the music tab selected
       pmselected: 1, // the previous  music tab that is selected
+      aselected: 1,
+      paselected: 1,
     };
   }
   updateScreen = (h) => {
-    var { selected, showScreen, mselected, pmselected } = this.state;
+    var {
+      selected,
+      showScreen,
+      mselected,
+      pmselected,
+      aselected,
+      paselected,
+    } = this.state;
     //if the component being displayed is the screen component
     if (showScreen === 0) {
       var prevSelected = selected;
@@ -38,6 +47,8 @@ class App extends React.Component {
         showScreen: 0,
         mselected: mselected,
         pmselected,
+        aselected: aselected,
+        paselected,
       });
     } else if (showScreen === 2) {
       var pmselected = mselected;
@@ -54,6 +65,26 @@ class App extends React.Component {
         showScreen: 2,
         mselected: mselected,
         pmselected,
+        aselected: aselected,
+        paselected,
+      });
+    } else if (showScreen === 6) {
+      var paselected = aselected;
+      // rotated in one direction
+      if (h === 1) aselected = (aselected + 1) % 6;
+      // when rotated in another direction
+      else if (h === -1) {
+        aselected = aselected - 1;
+        if (aselected <= 0) aselected = 1;
+      }
+      this.setState({
+        selected: selected,
+        prevSelected: prevSelected,
+        showScreen: 6,
+        mselected: mselected,
+        pmselected,
+        aselected: aselected,
+        paselected,
       });
     }
   };
@@ -65,6 +96,8 @@ class App extends React.Component {
       mselected,
       pmselected,
       showScreen,
+      aselected,
+      paselected,
     } = this.state;
     if (
       showScreen === 1 ||
@@ -78,15 +111,29 @@ class App extends React.Component {
         showScreen: 0, //show the screen number zero
         mselected: mselected, //the music tab that is selected
         pmselected, //the previously selected music tab
+        aselected: aselected,
+        paselected,
       });
     } //when inside the music tab
-    else {
+    else if (showScreen === 2) {
       this.setState({
         selected: selected,
         prevSelected: prevSelected,
         showScreen: 2, //show the screen number zero
         mselected: mselected,
         pmselected,
+        aselected: aselected,
+        paselected,
+      });
+    } else {
+      this.setState({
+        selected: selected,
+        prevSelected: prevSelected,
+        showScreen: 6, //show the screen number zero
+        mselected: mselected,
+        pmselected,
+        aselected: aselected,
+        paselected,
       });
     }
   };
@@ -98,6 +145,8 @@ class App extends React.Component {
       mselected,
       pmselected,
       showScreen,
+      aselected,
+      paselected,
     } = this.state;
     //if not on music screen
     if (showScreen === 0) {
@@ -106,7 +155,9 @@ class App extends React.Component {
         prevSelected,
         mselected: mselected,
         pmselected: pmselected,
-        showScreen: selected, //show screen of the active tab
+        showScreen: selected,
+        paselected: paselected,
+        aselected: aselected, //show screen of the active tab
       });
     }
     //if on the music screen
@@ -117,6 +168,18 @@ class App extends React.Component {
         showScreen: 4 + mselected,
         mselected,
         pmselected,
+        aselected,
+        paselected,
+      });
+    } else if (showScreen === 6) {
+      this.setState({
+        selected,
+        prevSelected,
+        showScreen: 6 + aselected,
+        mselected,
+        pmselected,
+        aselected,
+        paselected,
       });
     }
   };
@@ -128,6 +191,8 @@ class App extends React.Component {
       prevSelected,
       mselected,
       pmselected,
+      aselected,
+      paselected,
     } = this.state;
     return (
       <div className="App">
@@ -141,7 +206,9 @@ class App extends React.Component {
         {showScreen === 3 && <Games />}
         {showScreen === 4 && <Settings />}
         {showScreen === 5 && <Songs />}
-        {showScreen === 6 && <Artist />}
+        {showScreen === 6 && (
+          <Artist aselected={aselected} paselected={paselected} />
+        )}
         {showScreen === 7 && <Playlist />}
         <Wheel
           updateScreen={this.updateScreen}
