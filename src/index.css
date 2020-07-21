@@ -233,3 +233,122 @@ video {
   width: 100%;
   outline: none;
 }
+
+/*artist*/
+
+[type="radio"] {
+  display: none;
+}
+
+#slider {
+  height: 150px;
+  width: 180px;
+  position: relative;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  margin-top: 30px;
+}
+
+#slider label {
+  margin: auto;
+  width: 65%;
+  height: 60%;
+  border-radius: 4px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+#s1:checked ~ #slide4,
+#s2:checked ~ #slide5,
+#s3:checked ~ #slide1,
+#s4:checked ~ #slide2,
+#s5:checked ~ #slide3 {
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
+  transform: translate3d(-30%, 0, -200px);
+}
+
+#s1:checked ~ #slide5,
+#s2:checked ~ #slide1,
+#s3:checked ~ #slide2,
+#s4:checked ~ #slide3,
+#s5:checked ~ #slide4 {
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3), 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+  transform: translate3d(-15%, 0, -100px);
+}
+
+#s1:checked ~ #slide1,
+#s2:checked ~ #slide2,
+#s3:checked ~ #slide3,
+#s4:checked ~ #slide4,
+#s5:checked ~ #slide5 {
+  box-shadow: 0 13px 25px 0 rgb(0, 0, 0), 0 11px 7px 0 rgba(0, 0, 0, 0.31);
+  transform: translate3d(0, 0, 0);
+}
+
+#s1:checked ~ #slide2,
+#s2:checked ~ #slide3,
+#s3:checked ~ #slide4,
+#s4:checked ~ #slide5,
+#s5:checked ~ #slide1 {
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3), 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+  transform: translate3d(15%, 0, -100px);
+}
+
+#s1:checked ~ #slide3,
+#s2:checked ~ #slide4,
+#s3:checked ~ #slide5,
+#s4:checked ~ #slide1,
+#s5:checked ~ #slide2 {
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
+  transform: translate3d(30%, 0, -200px);
+}
+
+#slide1 {
+  background-image: url("https://img.etimg.com/thumb/msid-46702451,width-1200,height-900,imgsize-211711,overlay-etpanache/photo.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#slide2 {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("https://www.somagnews.com/wp-content/uploads/2020/01/a7-12-e1579117751843.jpg");
+}
+#slide3 {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("https://www.gannett-cdn.com/presto/2019/09/17/USAT/70408641-17f0-4a80-8f7c-596abf9da9a8-AP_People-Taylor_Swifts_House.JPG?crop=3666,2063,x0,y297&width=3200&height=1801&format=pjpg&auto=webp");
+}
+#slide4 {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("https://static.billboard.com/files/2020/06/02-john-legend-2020-cr-Joe-Pugliese-billboard-1548-1592499819-768x508.jpg");
+}
+#slide5 {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("https://cdn.britannica.com/98/163898-050-B2E2A704/British-sensation-Adele.jpg");
+}
+.singers-name {
+  text-align: center;
+  text-transform: capitalize;
+  color: white;
+  margin-top: 90px;
+  font-size: 13px;
+}
+
+/*battery*/
+#battery img {
+  height: 15px;
+  width: 20px;
+  float: right;
+  transform: rotate(180deg);
+  margin-right: 1px;
+}
