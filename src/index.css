@@ -154,7 +154,7 @@ h1 {
 }
 /*inner-elements*/
 .innerScreen {
-  height: 150px;
+  height: 130px;
   width: 180px;
   background-color: white;
   margin: auto;
@@ -357,4 +357,81 @@ video {
   float: right;
   transform: rotate(180deg);
   margin-right: 1px;
+}
+/*headbar*/
+.headBar {
+  width: 180px;
+  height: 15px;
+  background-color: black;
+  margin: auto;
+  z-index: 3;
+  /*position: absolute;
+  z-index: 2;
+  left: 20.2%;
+  top: 6%;*/
+}
+#hours,
+#minutes {
+  color: white;
+  display: inline-block;
+  font-size: 10px;
+  position: relative;
+  top: -4px;
+}
+#clock span {
+  color: white;
+  font-size: 10px;
+  position: relative;
+  top: -4px;
+}
+#seconds {
+  display: inline-block;
+  font-size: 10px;
+  position: relative;
+  top: -4px;
+  color: black;
+}
+
+/*calender*/
+.react-calendar {
+  width: 180px;
+  max-width: 100%;
+  height: 135px;
+  background: white;
+  border: 1px solid #a0a096;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.125em;
+}
+abbr[title] {
+  text-decoration: none;
+}
+.react-calendar__navigation button {
+  min-width: 2px !important;
+  height: 25px !important;
+  background: none;
+  font-size: 14px !important;
+}
+
+.react-calendar__month-view__weekdays {
+  /* text-align: center; */
+  /* text-transform: uppercase; */
+  font-weight: 1px !important;
+  font-size: 0.57em !important;
+  color: red;
+}
+button {
+  font-size: 9px !important;
+}
+.react-calendar__tile {
+  max-width: 100%;
+  text-align: center;
+  padding: 1.7px !important;
+  background: none;
+  margin-top: -1px !important;
+}
+.react-calendar__month-view__weekdays__weekday {
+  padding: 0 !important;
+}
+.react-calendar__month-view__weekdays__weekday {
+  margin-top: -30px;
 }

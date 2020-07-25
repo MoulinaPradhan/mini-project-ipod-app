@@ -1,15 +1,21 @@
 import React from "react";
+import Headbar from "./Headbar";
+import Calendar from "react-calendar";
+import 'react-calendar/dist/Calendar.css';
 
-const Coverflow = () => {
-  return (
-    <div className=" innerScreen">
-      <h1 className="textHeading">coverflow</h1>
-      <img
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT4nicRlExuQINqSiSVQq-lgZv-vZMKAdMzJw&usqp=CAU"
-        className="imgContainer"
-        alt="coverflow-img"
-      />
-    </div>
-  );
-};
+class Coverflow extends React.Component {
+  state = {
+    date: new Date(),
+  };
+  onChange = (date) => this.setState({ date });
+  render() {
+    return (
+      <div className=" innerScreen">
+        <Headbar />
+
+        <Calendar onChange={this.onChange} value={this.state.date} />
+      </div>
+    );
+  }
+}
 export default Coverflow;

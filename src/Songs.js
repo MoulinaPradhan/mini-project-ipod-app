@@ -1,9 +1,10 @@
 import React from "react";
+import Headbar from "./Headbar";
 
 const Songs = () => {
   return (
     <div className=" innerScreen">
-      <h1 className="textHeading">all songs</h1>
+      <Headbar />
       <div className="video-container">
         <video
           src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"

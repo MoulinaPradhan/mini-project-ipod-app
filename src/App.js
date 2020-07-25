@@ -8,6 +8,7 @@ import Music from "./Music";
 import Songs from "./Songs";
 import Artist from "./Artist";
 import Playlist from "./Playlist";
+
 class App extends React.Component {
   constructor() {
     super();
@@ -196,6 +197,7 @@ class App extends React.Component {
     } = this.state;
     return (
       <div className="App">
+  
         {showScreen === 0 && (
           <Screen selected={selected} prevSelected={prevSelected} /> //by destructuring
         )}

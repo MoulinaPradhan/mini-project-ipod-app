@@ -1,4 +1,5 @@
 import React from "react";
+import Headbar from "./Headbar";
 
 class Artist extends React.Component {
   componentDidMount() {
@@ -33,9 +34,7 @@ class Artist extends React.Component {
   render() {
     return (
       <div className=" innerScreen">
-        <div id="battery">
-          <img src="https://image.flaticon.com/icons/svg/3103/3103446.svg" />
-        </div>
+        <Headbar />
         <div id="slider">
           <input type="radio" name="slider" id="s1"></input>
           <input type="radio" name="slider" id="s2" />

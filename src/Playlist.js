@@ -1,10 +1,11 @@
 import React from "react";
+import Headbar from "./Headbar";
 
 class Playlist extends React.Component {
   render() {
     return (
       <div className=" innerScreen">
-        <h1 className="textHeading">Playlist</h1>
+        <Headbar />
         <div className="audio-bar">
           <img
             alt="audio-img"

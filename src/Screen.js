@@ -38,12 +38,15 @@ class Screen extends React.Component {
   render() {
     return (
       <div className="screen">
+        <div id="battery">
+          <img src="https://image.flaticon.com/icons/svg/3103/3103446.svg" />
+        </div>
         <div className="sideBar">
           <h1>Ipod</h1>
           <ul className="menu-list" type="none">
             <li className="listItem" id="list1">
               <a href="#xyz" className="menuLinks">
-                coverflow
+                calendar
               </a>
             </li>
 
