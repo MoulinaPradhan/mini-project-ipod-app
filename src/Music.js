@@ -36,7 +36,7 @@ class Music extends React.Component {
           <h1>Music</h1>
           <ul type="none" className="menu-list">
             <li className="musicItems" id="mlist1">
-              <a href="#xyz">all songs</a>
+              <a href="#xyz">videoes</a>
             </li>
             <li className="musicItems" id="mlist2">
               <a href="#xyz">artists</a>
