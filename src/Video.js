@@ -1,7 +1,7 @@
 import React from "react";
 import Headbar from "./Headbar";
 
-class Songs extends React.Component {
+class Video extends React.Component {
   render() {
     return (
       <div className=" innerScreen" style={{ backgroundColor: "black" }}>
@@ -24,4 +24,4 @@ class Songs extends React.Component {
   }
 }
 
-export default Songs;
+export default Video;

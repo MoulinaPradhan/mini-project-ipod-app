@@ -190,20 +190,21 @@ h1 {
   height: 88px;
   z-index: 1;
   width: 160px;
-  position: absolute;
+  position: relative;
+  left: 10px;
+  top: -31px;
 }
-.audio-bar {
-  height: 106px;
-  width: 160px;
-  margin: auto;
-  margin-top: -12px;
-  background-color: #9e9e9e1c;
-  -moz-box-shadow: 2px 2px 4px 0px #006773;
-  -webkit-box-shadow: 2px 2px 4px 0px #006773;
-  box-shadow: 1px 1px 4px 0px black;
-  -moz-border-radius: 0px 7px 7px 0px;
-  -webkit-border-radius: 0px 7px 7px 0px;
-  border-radius: 0px 0px 0px 0px;
+#cd {
+  height: 18px;
+  width: 18px;
+  animation: rotating 3s infinite ease;
+}
+#music-name {
+  color: darkslategray;
+  font-size: 9px;
+  position: relative;
+  top: -30px;
+  left: 22px;
 }
 audio {
   width: 160px;
@@ -218,6 +219,49 @@ audio {
   transition: all 0.5s linear;
   outline: none;
 }
+.animation-bar-2 {
+  position: relative;
+  top: -34px;
+  left: 9px;
+  display: block;
+  padding: 5px;
+  width: 150px;
+  line-height: 1px;
+  border-radius: 0px;
+  background: rgba(0, 0, 0, 0);
+}
+
+.animation-bar-2 span {
+  position: relative;
+  left: -5px;
+  display: inline-block;
+  vertical-align: middle;
+  height: 6px;
+  overflow: hidden;
+
+  background-size: 100%;
+  background-image: linear-gradient(to right, skyblue, #e52e71);
+  animation: progress 198s 1 ease;
+}
+
+.animation-bar-2 span::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: "";
+  background-size: 100%;
+
+  background-image: -moz-linear-gradient(to right, #ff8a00, #e52e71);
+  border-radius: 3px;
+  position: relative;
+  transition: width 1s linear;
+
+  background-size: 30px, 30px;
+  opacity: 0.3;
+}
+/*video*/
 .video-container {
   height: 140px;
   width: 170px;
@@ -261,7 +305,7 @@ audio {
   vertical-align: middle;
   height: 6px;
   overflow: hidden;
-  background-color: #f56982;
+
   background-size: 100%;
   background-image: linear-gradient(to right, #ff8a00, #e52e71);
   animation: progress 153s 1 ease;
@@ -286,7 +330,7 @@ audio {
 }
 @keyframes progress {
   0% {
-    width: 5%;
+    width: 1%;
   }
   100% {
     width: 100%;

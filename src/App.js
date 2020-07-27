@@ -5,7 +5,7 @@ import Coverflow from "./Coverflow";
 import Games from "./Games";
 import Settings from "./Settings";
 import Music from "./Music";
-import Songs from "./Songs";
+import Video from "./Video";
 import Artist from "./Artist";
 import Playlist from "./Playlist";
 
@@ -197,7 +197,6 @@ class App extends React.Component {
     } = this.state;
     return (
       <div className="App">
-  
         {showScreen === 0 && (
           <Screen selected={selected} prevSelected={prevSelected} /> //by destructuring
         )}
@@ -207,7 +206,7 @@ class App extends React.Component {
         )}
         {showScreen === 3 && <Games />}
         {showScreen === 4 && <Settings />}
-        {showScreen === 5 && <Songs />}
+        {showScreen === 5 && <Video />}
         {showScreen === 6 && (
           <Artist aselected={aselected} paselected={paselected} />
         )}
