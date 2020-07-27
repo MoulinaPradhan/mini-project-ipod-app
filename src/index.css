@@ -349,7 +349,7 @@ audio {
   position: relative;
   perspective: 1000px;
   transform-style: preserve-3d;
-  margin-top: 30px;
+  margin-top: 10px;
 }
 
 #slider label {
@@ -569,4 +569,9 @@ button {
   text-align: center;
   margin-top: 24px;
   font-size: 450;
+}
+/*game*/
+#game {
+  height: 135px;
+  width: 100%;
 }
