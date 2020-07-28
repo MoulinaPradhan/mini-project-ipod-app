@@ -5,6 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: lightgreen;
+  background-image: linear-gradient(lightgreen);
 }
 
 code {
@@ -104,7 +106,7 @@ code {
   height: 150px;
   width: 180px;
 
-  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSkF9uriXmYWKG0K_2BXJrU4Q3y-sgyhxtbWg&usqp=CAU");
+  background-image: url("https://t3.ftcdn.net/jpg/02/37/67/58/240_F_237675815_zvDBYgwQgUFhHgXXbp2NfbwuByp6WiQM.jpg");
   background-position: center;
   background-size: cover;
   margin: auto;
@@ -128,20 +130,26 @@ code {
 }
 .sideBar {
   float: left;
-  background-color: white;
+  background-color: #ffffff14;
   height: 100%;
   width: 50%;
+  /* box-shadow: inset 8px -12px 20px 0px #eaf0f394;*/
 }
 h1 {
   margin-top: 1px;
+  margin-left: 10px;
   text-align: left;
-  font-size: 25px;
+  font-size: 23px;
+  text-shadow: 2px -1px 1px #f7eded;
+  color: #ce1264;
 }
 .menu-list li a {
-  color: darkslategray;
+  color: white;
   text-transform: capitalize;
   text-decoration: none;
+  text-shadow: -2px -1px 2px black;
 }
+
 .menu-list {
   margin-left: -34px;
   margin-top: -2px;
@@ -150,7 +158,9 @@ h1 {
   height: auto;
   width: 107%;
   margin-left: -5.7px;
-  background-color: deepskyblue;
+  background-color: #06d2ec;
+  text-align: center;
+  text-shadow: -2px -1px 2px black;
 }
 /*inner-elements*/
 .innerScreen {
@@ -480,6 +490,7 @@ audio {
   font-size: 10px;
   position: relative;
   top: -4px;
+  cursor: pointer;
 }
 #clock span {
   color: white;

@@ -42,7 +42,7 @@ class Screen extends React.Component {
           <img src="https://image.flaticon.com/icons/svg/3103/3103446.svg" />
         </div>
         <div className="sideBar">
-          <h1>Ipod</h1>
+          <h1>Menu</h1>
           <ul className="menu-list" type="none">
             <li className="listItem" id="list1">
               <a href="#xyz" className="menuLinks">

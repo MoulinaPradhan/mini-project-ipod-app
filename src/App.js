@@ -8,6 +8,7 @@ import Music from "./Music";
 import Video from "./Video";
 import Artist from "./Artist";
 import Playlist from "./Playlist";
+import ThankYou from "./ThankYou";
 
 class App extends React.Component {
   constructor() {
@@ -18,8 +19,8 @@ class App extends React.Component {
       showScreen: 0, //the screen number which shows
       mselected: 1, //the music tab selected
       pmselected: 1, // the previous  music tab that is selected
-      aselected: 1,
-      paselected: 1,
+      aselected: 1,// artist is selected
+      paselected: 1,//previous artist is selected
     };
   }
   updateScreen = (h) => {
@@ -104,7 +105,7 @@ class App extends React.Component {
       showScreen === 1 ||
       showScreen === 2 ||
       showScreen === 3 ||
-      showScreen === 4
+      showScreen === 4 
     ) {
       this.setState({
         selected: selected,
@@ -130,7 +131,7 @@ class App extends React.Component {
       this.setState({
         selected: selected,
         prevSelected: prevSelected,
-        showScreen: 6, //show the screen number zero
+        showScreen: 2, //show the screen number zero
         mselected: mselected,
         pmselected,
         aselected: aselected,
@@ -172,6 +173,7 @@ class App extends React.Component {
         aselected,
         paselected,
       });
+      //if on artists
     } else if (showScreen === 6) {
       this.setState({
         selected,
@@ -211,6 +213,7 @@ class App extends React.Component {
           <Artist aselected={aselected} paselected={paselected} />
         )}
         {showScreen === 7 && <Playlist />}
+        {showScreen === 8 && <ThankYou/>}
         <Wheel
           updateScreen={this.updateScreen}
           displayInnerScreen={this.displayInnerScreen}

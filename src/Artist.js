@@ -37,12 +37,12 @@ class Artist extends React.Component {
         <Headbar />
         <div id="slider">
           <input type="radio" name="slider" id="s1"></input>
-          <input type="radio" name="slider" id="s2" />
-          <input type="radio" name="slider" id="s3" checked />
+          <input type="radio" name="slider" id="s2"></input>
+          <input type="radio" name="slider" id="s3"/>
           <input type="radio" name="slider" id="s4" />
           <input type="radio" name="slider" id="s5" />
           <label for="s1" id="slide1">
-            <p className="singers-name"> zayn mallik</p>
+            <p className="singers-name"> zayn malik</p>
           </label>
           <label for="s2" id="slide2">
             <p className="singers-name">eminem</p>
