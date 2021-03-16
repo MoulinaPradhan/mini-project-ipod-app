@@ -105,27 +105,26 @@ code {
 .screen {
   height: 150px;
   width: 180px;
-
   background-image: url("https://t3.ftcdn.net/jpg/02/37/67/58/240_F_237675815_zvDBYgwQgUFhHgXXbp2NfbwuByp6WiQM.jpg");
   background-position: center;
   background-size: cover;
   margin: auto;
   position: absolute;
-  top: 6%;
-  left: 40.2%;
+  top: 4%;
+  left: 43.5%;
   z-index: 1;
 }
 
 @media screen and (min-width: 410px) and (max-width: 600px) {
   .screen {
-    top: 6%;
-    left: 31.5%;
+    top: 4.5%;
+    left: 32%;
   }
 }
 @media screen and (max-width: 400px) {
   .screen {
     top: 6%;
-    left: 23.2%;
+    left: 20.2%;
   }
 }
 .sideBar {
